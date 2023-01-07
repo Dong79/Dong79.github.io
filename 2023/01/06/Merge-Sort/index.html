@@ -9,7 +9,7 @@
     
     <title>
         
-            Tag: Personal talk |
+            Merge Sort |
         
         William&#39;s Blog
     </title>
@@ -296,42 +296,110 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="tag-container">
-        <div class="tag-name"><i class="fa-solid fa-tag"></i>&nbsp;Personal talk
-        </div>
-        <div class="tag-post-list">
-            
-<div class="archive-list-container">
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[1]</span>
+    <div class="post-page-container">
+        <div class="article-content-container">
+            <div class="article-title">
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Merge Sort</h1></span>
             </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/01/04/My-New-Post/"
-                        >My First Post</a>
-                        <span class="article-date">01-04</span>
-                    </li>
-                
-            </ul>
-        </section>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="https://pic3.zhimg.com/v2-14da6c77910beafa7b0f4eaf666dfde4_r.jpg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">William Wang</span>
+                            
+                                <span class="author-label">lol</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-01-06 18:06:34</span>
+        <span class="mobile">2023-01-06 18:06</span>
+    </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <p>Java code</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">package MergeSort;</span><br><span class="line">public class MergeSort &#123;   </span><br><span class="line">    public static int[] mergeSort(int[] nums, int l, int h) &#123;</span><br><span class="line">        if (l == h)</span><br><span class="line">            return new int[] &#123; nums[l] &#125;;</span><br><span class="line">         </span><br><span class="line">        int mid = l + (h - l) / 2;</span><br><span class="line">        int[] leftArr = mergeSort(nums, l, mid); //左有序数组</span><br><span class="line">        int[] rightArr = mergeSort(nums, mid + 1, h); //右有序数组</span><br><span class="line">        int[] newNum = new int[leftArr.length + rightArr.length]; //新有序数组</span><br><span class="line">         </span><br><span class="line">        int m = 0, i = 0, j = 0; </span><br><span class="line">        while (i &lt; leftArr.length &amp;&amp; j &lt; rightArr.length) &#123;</span><br><span class="line">            newNum[m++] = leftArr[i] &lt; rightArr[j] ? leftArr[i++] : rightArr[j++];</span><br><span class="line">        &#125;</span><br><span class="line">        while (i &lt; leftArr.length)</span><br><span class="line">            newNum[m++] = leftArr[i++];</span><br><span class="line">        while (j &lt; rightArr.length)</span><br><span class="line">            newNum[m++] = rightArr[j++];</span><br><span class="line">        return newNum;</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int[] nums = new int[] &#123; 9, 8, 7, 6, 5, 4, 3, 2, 10 &#125;;</span><br><span class="line">        int[] newNums = mergeSort(nums, 0, nums.length - 1);</span><br><span class="line">        for (int x : newNums) &#123;</span><br><span class="line">            System.out.println(x);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Merge Sort</li>
+        <li>Post author：William Wang</li>
+        <li>Create time：2023-01-06 18:06:34</li>
+        <li>
+            Post link：https://dong79.github.io/2023/01/06/Merge-Sort/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/01/04/My-New-Post/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">My First Post</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
         </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
+        
     </div>
-
-    <div class="tag-paginator">
-        <div class="paginator">
-    
-
-    
 </div>
-
+            </div>
+        
     </div>
 </div>
 
@@ -403,6 +471,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -532,6 +617,14 @@
 
 
 <div class="post-scripts pjax">
+    
+        
+<script src="/js/toc-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 
