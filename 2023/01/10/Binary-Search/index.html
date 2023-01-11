@@ -9,7 +9,7 @@
     
     <title>
         
-            Archive |
+            Binary Search |
         
         William&#39;s Blog
     </title>
@@ -101,7 +101,7 @@
                     
                         <li class="menu-item">
                             <!-- Menu -->
-                            <a class="active" 
+                            <a class="" 
                                 href="/archives" >
                                 
                                     
@@ -215,7 +215,7 @@
                 
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active" 
+                    <a class="" 
                        href="/archives" >
                          
                             
@@ -296,45 +296,120 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="archive-container ">
-        
-<div class="archive-list-container">
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2023</span>
-                <span class="archive-year-post-count">[3]</span>
+    <div class="post-page-container">
+        <div class="article-content-container">
+            <div class="article-title">
+                <span class="title-hover-animation"><h1 style="font-size:2rem; font-weight: bold; margin: 10px 0;">Binary Search</h1></span>
             </div>
-            <ul class="article-list">
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/01/10/Binary-Search/"
-                        >Binary Search</a>
-                        <span class="article-date">01-10</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/01/06/Merge-Sort/"
-                        >Merge Sort</a>
-                        <span class="article-date">01-06</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2023/01/04/My-New-Post/"
-                        >My First Post</a>
-                        <span class="article-date">01-04</span>
-                    </li>
-                
-            </ul>
-        </section>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="https://pic3.zhimg.com/v2-14da6c77910beafa7b0f4eaf666dfde4_r.jpg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">William Wang</span>
+                            
+                                <span class="author-label">lol</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="pc">2023-01-10 22:05:30</span>
+        <span class="mobile">2023-01-10 22:05</span>
+    </span>
+    
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <h1 id="Performance"><a href="#Performance" class="headerlink" title="Performance"></a>Performance</h1><h2 id="Best-case-performance"><a href="#Best-case-performance" class="headerlink" title="Best-case performance"></a>Best-case performance</h2><p>O(1)</p>
+<h2 id="Worst-case-performance"><a href="#Worst-case-performance" class="headerlink" title="Worst-case performance"></a>Worst-case performance</h2><p>O(log n)</p>
+<h2 id="Average-performance"><a href="#Average-performance" class="headerlink" title="Average performance"></a>Average performance</h2><p>O(log n)</p>
+<h2 id="Worst-case-space-complexity"><a href="#Worst-case-space-complexity" class="headerlink" title="Worst-case space complexity"></a>Worst-case space complexity</h2><p>O(1)</p>
+<h1 id="Java-code-in-general"><a href="#Java-code-in-general" class="headerlink" title="Java code in general"></a>Java code in general</h1><div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">class</span> <span class="title class_">BinarySearch</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">search</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> target)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> nums.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> left + ((right - left) &gt;&gt; <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span> (nums[mid] == target) <span class="keyword">return</span> mid;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (nums[mid] &gt; target) &#123;</span><br><span class="line">                right = mid - <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                left = mid + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h1 id="Notice-for-using"><a href="#Notice-for-using" class="headerlink" title="Notice for using"></a>Notice for using</h1><h2 id="左闭右闭"><a href="#左闭右闭" class="headerlink" title="左闭右闭"></a>左闭右闭</h2><p>对于左闭右闭区间，while使用的是&lt;&#x3D;，因为left可以&#x3D;right；此外，if(nums[mid]&gt;target)，right&#x3D;mid-1，因为区间可以取到right的值，而mid对应的值被排除，所以right&#x3D;mid-1; left同理</p>
+<h2 id="左闭右开"><a href="#左闭右开" class="headerlink" title="左闭右开"></a>左闭右开</h2><p>while使用&lt;;right &#x3D;mid; right&#x3D;mid; left &#x3D; mid+1;</p>
+
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li>Post title：Binary Search</li>
+        <li>Post author：William Wang</li>
+        <li>Create time：2023-01-10 22:05:30</li>
+        <li>
+            Post link：https://dong79.github.io/2023/01/10/Binary-Search/
+        </li>
+        <li>
+            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/01/06/Merge-Sort/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">Merge Sort</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div style="font-size: 1.3rem;margin-top: 0; margin-bottom: 0.8rem; transition-duration: 0.1s;"><i class="fa-solid fa-list"></i> <strong>Contents</strong></div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Performance"><span class="nav-text">Performance</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Best-case-performance"><span class="nav-text">Best-case performance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Worst-case-performance"><span class="nav-text">Worst-case performance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Average-performance"><span class="nav-text">Average performance</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Worst-case-space-complexity"><span class="nav-text">Worst-case space complexity</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-code-in-general"><span class="nav-text">Java code in general</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Notice-for-using"><span class="nav-text">Notice for using</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A6%E9%97%AD%E5%8F%B3%E9%97%AD"><span class="nav-text">左闭右闭</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A6%E9%97%AD%E5%8F%B3%E5%BC%80"><span class="nav-text">左闭右开</span></a></li></ol></li></ol>
     </div>
 </div>
+            </div>
+        
+    </div>
+</div>
+
 
                 
 
@@ -403,6 +478,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -532,6 +624,14 @@
 
 
 <div class="post-scripts pjax">
+    
+        
+<script src="/js/toc-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 
